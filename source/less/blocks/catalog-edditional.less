@@ -1,6 +1,7 @@
 .catalog-edditional {
   padding-left: 18px;
   padding-right: 20px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     padding: 30px;
@@ -13,13 +14,27 @@
 
 .catalog-edditional__wrapper {
   width: 282px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 708px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 896px;
+    width: 1220px;
+  }
+}
+
+.catalog-edditional__wrapper-block {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
   }
 }
 
@@ -29,4 +44,19 @@
   font-size: 24px;
   line-height: 24px;
   color: @color-black-2;
+}
+
+.catalog-edditional__list {
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+    min-height: 288px;
+  }
+}
+
+.catalog-edditional__present {
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    min-height: 289px;
+  }
 }
