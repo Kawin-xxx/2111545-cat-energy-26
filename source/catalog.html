@@ -2,13 +2,22 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!-- 16×16 -->
+    <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body class="page__body">
     <header class="main-header main-header--catalog">
-      <!-- Для реализации без script.js раскомментировать класс "main-header__wrapper-nojs" -->
+      <!-- Для реализации без script.js удалить 534 строку -->
       <div class="main-header__wrapper main-header__wrapper-nojs">
         <div class="main-header__wrapper-logo">
           <a class="main-header__logo" href="index.html">
@@ -53,20 +62,24 @@
           <ul class="catalog__product-list product-list">
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-1-desktop.webp 1x, img/catalog/catalog-1-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-1-tablet.webp 1x, img/catalog/catalog-1-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-1-mobile.webp 1x, img/catalog/catalog-1-mobile@2x.webp 2x">
+                <a class="product__link-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-1-desktop.webp 1x, img/catalog/catalog-1-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-1-tablet.webp 1x, img/catalog/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-1-mobile.webp 1x, img/catalog/catalog-1-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-1-desktop.png 1x, img/catalog/catalog-1-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-1-tablet.png 1x, img/catalog/catalog-1-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-1-mobile.png" srcset="img/catalog/catalog-1-mobile.png 1x img/catalog/catalog-1-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-1-desktop.png 1x, img/catalog/catalog-1-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-1-tablet.png 1x, img/catalog/catalog-1-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-1-mobile.png" srcset="img/catalog/catalog-1-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy PRO 500 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy PRO 500 г</h3>
+                  </a>
 
                   <dl class="product__detail">
                     <div class="product__detail-wrapper">
@@ -86,26 +99,30 @@
                   </dl>
                 </div>
 
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper product__image-wrapper--big">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-2-desktop.webp 1x, img/catalog/catalog-2-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-2-tablet.webp 1x, img/catalog/catalog-2-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-2-mobile.webp 1x, img/catalog/catalog-2-mobile@2x.webp 2x">
+                <a class="product__link-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-2-desktop.webp 1x, img/catalog/catalog-2-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-2-tablet.webp 1x, img/catalog/catalog-2-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-2-mobile.webp 1x, img/catalog/catalog-2-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-2-desktop.png 1x, img/catalog/catalog-2-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-2-tablet.png 1x, img/catalog/catalog-2-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-2-mobile.png" srcset="img/catalog/catalog-2-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-2-desktop.png 1x, img/catalog/catalog-2-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-2-tablet.png 1x, img/catalog/catalog-2-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-2-mobile.png" srcset="img/catalog/catalog-2-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy PRO 1000 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy PRO 1000 г</h3>
+                  </a>
 
                   <dl class="product__detail">
 
@@ -127,26 +144,30 @@
                   </dl>
                 </div>
 
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-3-desktop.webp 1x, img/catalog/catalog-3-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-3-tablet.webp 1x, img/catalog/catalog-3-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-3-mobile.webp 1x, img/catalog/catalog-3-mobile@2x.webp 2x">
+                <a class="product__link-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-3-desktop.webp 1x, img/catalog/catalog-3-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-3-tablet.webp 1x, img/catalog/catalog-3-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-3-mobile.webp 1x, img/catalog/catalog-3-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-3-desktop.png 1x, img/catalog/catalog-3-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-3-tablet.png 1x, img/catalog/catalog-3-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-3-mobile.png" srcset="img/catalog/catalog-3-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-3-desktop.png 1x, img/catalog/catalog-3-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-3-tablet.png 1x, img/catalog/catalog-3-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-3-mobile.png" srcset="img/catalog/catalog-3-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy PRO 500 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy PRO 500 г</h3>
+                  </a>
 
                   <dl class="product__detail">
 
@@ -168,26 +189,30 @@
                   </dl>
                 </div>
 
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-4-desktop.webp 1x, img/catalog/catalog-4-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-4-tablet.webp 1x, img/catalog/catalog-4-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-4-mobile.webp 1x, img/catalog/catalog-4-mobile@2x.webp 2x">
+                <a class="product__link-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-4-desktop.webp 1x, img/catalog/catalog-4-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-4-tablet.webp 1x, img/catalog/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-4-mobile.webp 1x, img/catalog/catalog-4-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-4-desktop.png 1x, img/catalog/catalog-4-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-4-tablet.png 1x, img/catalog/catalog-4-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-4-mobile.png" srcset="img/catalog/catalog-4-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-4-desktop.png 1x, img/catalog/catalog-4-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-4-tablet.png 1x, img/catalog/catalog-4-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-4-mobile.png" srcset="img/catalog/catalog-4-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy PRO 1000 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy PRO 1000 г</h3>
+                  </a>
 
                   <dl class="product__detail">
 
@@ -208,26 +233,30 @@
 
                   </dl>
                 </div>
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-5-desktop.webp 1x, img/catalog/catalog-5-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-5-tablet.webp 1x, img/catalog/catalog-5-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-5-mobile.webp 1x, img/catalog/catalog-5-mobile@2x.webp 2x">
+                <a class="product__link-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-5-desktop.webp 1x, img/catalog/catalog-5-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-5-tablet.webp 1x, img/catalog/catalog-5-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-5-mobile.webp 1x, img/catalog/catalog-5-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-5-desktop.png 1x, img/catalog/catalog-5-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-5-tablet.png 1x, img/catalog/catalog-5-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-5-mobile.png" srcset="img/catalog/catalog-5-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-5-desktop.png 1x, img/catalog/catalog-5-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-5-tablet.png 1x, img/catalog/catalog-5-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-5-mobile.png" srcset="img/catalog/catalog-5-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy slim 500 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy slim 500 г</h3>
+                  </a>
 
                   <dl class="product__detail">
 
@@ -248,26 +277,30 @@
 
                   </dl>
                 </div>
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-6-desktop.webp 1x, img/catalog/catalog-6-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-6-tablet.webp 1x, img/catalog/catalog-6-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-6-mobile.webp 1x, img/catalog/catalog-6-mobile@2x.webp 2x">
+                <a class="product__link-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-6-desktop.webp 1x, img/catalog/catalog-6-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-6-tablet.webp 1x, img/catalog/catalog-6-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-6-mobile.webp 1x, img/catalog/catalog-6-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-6-desktop.png 1x, img/catalog/catalog-6-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-6-tablet.png 1x, img/catalog/catalog-6-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-6-mobile.png" srcset="img/catalog/catalog-6-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-6-desktop.png 1x, img/catalog/catalog-6-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-6-tablet.png 1x, img/catalog/catalog-6-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-6-mobile.png" srcset="img/catalog/catalog-6-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy slim 1000 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy slim 1000 г</h3>
+                  </a>
 
                   <dl class="product__detail">
 
@@ -288,26 +321,30 @@
 
                   </dl>
                 </div>
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
             <li class="product-list__item product">
               <div class="product__wrapper">
-                <div class="product__image-wrapper">
-                  <picture>
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-7-desktop.webp 1x, img/catalog/catalog-7-desktop@2x.webp 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-7-tablet.webp 1x, img/catalog/catalog-7-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/catalog-7-mobile.webp 1x, img/catalog/catalog-7-mobile@2x.webp 2x">
+                <a class="product__link-image-image" href="#">
+                  <div class="product__image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-7-desktop.webp 1x, img/catalog/catalog-7-desktop@2x.webp 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-7-tablet.webp 1x, img/catalog/catalog-7-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog/catalog-7-mobile.webp 1x, img/catalog/catalog-7-mobile@2x.webp 2x">
 
-                    <source media="(min-width: 1440px)" srcset="img/catalog/catalog-7-desktop.png 1x, img/catalog/catalog-7-desktop@2x.png 2x">
-                    <source media="(min-width: 768px)" srcset="img/catalog/catalog-7-tablet.png 1x, img/catalog/catalog-7-tablet@2x.png 2x">
-                    <img class="product__picture" width="140" height="112" src="img/catalog/catalog-7-mobile.png" srcset="img/catalog/catalog-7-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
-                  </picture>
-                </div>
+                      <source media="(min-width: 1440px)" srcset="img/catalog/catalog-7-desktop.png 1x, img/catalog/catalog-7-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/catalog/catalog-7-tablet.png 1x, img/catalog/catalog-7-tablet@2x.png 2x">
+                      <img class="product__picture" width="140" height="112" src="img/catalog/catalog-7-mobile.png" srcset="img/catalog/catalog-7-mobile@2x.png 2x" alt="Куринный корм 500 грамм.">
+                    </picture>
+                  </div>
+                </a>
 
                 <div class="product__info-wrapper">
-                  <h3 class="product__name">Cat Energy slim 500 г</h3>
+                  <a class="product__link" href="#">
+                    <h3 class="product__name">Cat Energy slim 500 г</h3>
+                  </a>
 
                   <dl class="product__detail">
 
@@ -328,7 +365,7 @@
 
                   </dl>
                 </div>
-                <button class="product__order-button button" type="button">Заказать</button>
+                <a class="product__order-button button">Заказать</a>
               </div>
             </li>
 
@@ -336,7 +373,7 @@
               <div class="product__wrapper product__wrapper-show-more">
                 <p class="catalog__show-more">Показать еще 100500 товаров</p>
                 <p class="catalog__comment">На самом деле вкусов гораздо больше!</p>
-                <button class="catalog__button-show-all button button--additional" type="button">показать все</button>
+                <a class="catalog__button-show-all button button--additional">показать все</a>
               </div>
             </li>
           </ul>
@@ -355,37 +392,43 @@
             <li class="edditional-list__item product-editional">
               <div class="product-editional__wrapper">
 
-                <h3 class="product-editional__name">Сахарозаменитель</h3>
+                <a class="product-editional__link" href="#">
+                  <h3 class="product-editional__name">Сахарозаменитель</h3>
+                </a>
                 <dl class="product-editional__detail">
                   <dt class="product-editional__volume">1 упаковка (100 г)</dt>
                   <dd class="product-editional__cost">200 Р.</dd>
                 </dl>
-                <button class="button product-editional__button" type="button">Заказать</button>
+                <a class="button product-editional__button">Заказать</a>
               </div>
             </li>
 
             <li class="edditional-list__item product-editional">
 
               <div class="product-editional__wrapper">
-                <h3 class="product-editional__name">питьевая вода</h3>
+                <a class="product-editional__link" href="#">
+                  <h3 class="product-editional__name">питьевая вода</h3>
+                </a>
                 <dl class="product-editional__detail">
                   <dt class="product-editional__volume product-editional__volume--water">5 литров</dt>
-                  <dd class="product-editional__cost">50 Р.</dd>
+                  <dd class="product-editional__cost product-editional__cost--one">50 Р.</dd>
                 </dl>
-                <button class="button product-editional__button" type="button">Заказать</button>
+                <a class="button product-editional__button">Заказать</a>
               </div>
 
             </li>
 
             <li class="edditional-list__item product-editional">
               <div class="product-editional__wrapper">
-                <h3 class="product-editional__name">молоко</h3>
+                <a class="product-editional__link" href="#">
+                  <h3 class="product-editional__name">молоко</h3>
+                </a>
 
                 <dl class="product-editional__detail">
                   <dt class="product-editional__volume">1 литр</dt>
                   <dd class="product-editional__cost">100 Р.</dd>
                 </dl>
-                <button class="button product-editional__button" type="button">Заказать</button>
+                <a class="button product-editional__button">Заказать</a>
               </div>
 
             </li>
@@ -393,12 +436,14 @@
             <li class="edditional-list__item product-editional">
               <div class="product-editional__wrapper">
 
-                <h3 class="product-editional__name">витамины</h3>
+                <a class="product-editional__link" href="#">
+                  <h3 class="product-editional__name">витамины</h3>
+                </a>
                 <dl class="product-editional__detail">
                   <dt class="product-editional__volume">1 упаковка (30 г)</dt>
                   <dd class="product-editional__cost">300 Р.</dd>
                 </dl>
-                <button class="button product-editional__button" type="button">Заказать</button>
+                <a class="button product-editional__button">Заказать</a>
               </div>
             </li>
           </ul>
@@ -486,7 +531,6 @@
 
       </div>
     </footer>
-
     <script src="js/script.js"></script>
   </body>
 </html>

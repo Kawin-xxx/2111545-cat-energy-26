@@ -46,13 +46,13 @@
 .product__wrapper-show-more {
   background-color: @color-white;
   position: relative;
-  padding-top: 56px;
+  padding-top: 60px;
   display: block;
 
   &::before {
     content: "";
     position: absolute;
-    top: 16px;
+    top: 20px;
     left: 126px;
     width: 30px;
     height: 2px;
@@ -118,17 +118,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    margin-bottom: 38px;
-  }
-}
-
-.product__image-wrapper--big {
-  @media (min-width: @tablet-width) {
-    margin-bottom: 22px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-bottom: 38px;
+    margin-bottom: 41px;
   }
 }
 
@@ -148,6 +138,18 @@
 
 .product__info-wrapper {
   grid-area: info;
+}
+
+.product__link {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__name {

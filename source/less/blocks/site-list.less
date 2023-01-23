@@ -18,13 +18,15 @@
   z-index: 10;
   padding-top: 22px;
   padding-bottom: 22px;
+  border-top: 2px solid @color-light-grey-2;
 
-  @media (max-width: @mobile-width-only) {
+  /*@media (max-width: @mobile-width-only) {
     border-top: 2px solid @color-light-grey-2;
-  }
+  }*/
 
   @media (min-width: @tablet-width) {
     padding-top: 26px;
+    border-top: none;
 
     &:not(:last-child) {
       margin-right: 36px;

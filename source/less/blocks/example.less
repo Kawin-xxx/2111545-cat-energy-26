@@ -1,29 +1,26 @@
 .example {
   background-color: @color-light-grey;
-
-  padding: 20px;
+  padding: 0 20px;
   padding-top: 25px;
   padding-bottom: 39px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 30px;
     padding-bottom: 100px;
     background: linear-gradient(to bottom, @color-white 57%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 110px;
     padding-bottom: 26px;
-    background: linear-gradient(to bottom, @color-white 22%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
+    padding-top: 22px;
+    background: linear-gradient(to bottom, @color-white 26%, @color-light-grey 22%, @color-light-grey 44%, @color-light-grey 44%);
   }
 }
 
 .example__wrapper {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
-  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: "description"
@@ -31,7 +28,8 @@
     "range";
 
   @media (min-width: @tablet-width) {
-    width: 768px;
+    width: 705px;
+    padding-top: 23px;
     grid-template-columns: 1fr;
     grid-template-areas: "description"
       "parametrs"
@@ -39,29 +37,22 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 100%;
-    padding-bottom: 0;
-    grid-template-columns: 600px 654px;
+    grid-template-columns: 449px 654px;
     grid-template-rows: 306px 200px;
     gap: 66px 156px;
     grid-template-areas: "description range"
       "parametrs range";
+    width: 1220px;
+    padding: 0;
   }
 }
 
 .example__wrapper-description {
   grid-area: description;
-  padding-left: 21px;
-  width: 301px;
+  width: 282px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
     width: 738px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-left: 147px;
   }
 }
 
@@ -90,15 +81,12 @@
 
 .example__parametrs {
   grid-area: parametrs;
-  padding-left: 21px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-right: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 145px;
     padding-right: 0;
   }
 }
@@ -108,6 +96,10 @@
 
   @media (min-width: @tablet-width) {
     min-height: 617px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 616px;
   }
 }
 
@@ -119,18 +111,20 @@
   color: @color-dark-grey;
   margin: 0;
   margin-bottom: 4px;
+  width: 280px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
+    width: 680px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 16px;
     line-height: 24px;
     margin: 0;
-    width: 436px;
+    width: 438px;
   }
 }
 
@@ -174,7 +168,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 4px;
+    padding-left: 0;
   }
 }
 
@@ -183,18 +177,67 @@
   display: inline-block;
 }
 
-.example__thumb {
-  position: absolute;
-  left: 140px;
-  top: 109px;
+.example__button {
+  height: 40px;
+  left: 121px;
+  top: 96px;
+  z-index: 2;
+  position: relative;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+
+  &::before {
+    z-index: -1;
+    height: 256px;
+    width: 4px;
+    border-radius: 2px;
+    content: "";
+    position: absolute;
+    top: -109px;
+    left: 17px;
+    background-color: @color-dark-grey-1;
+
+    @media (min-width: @tablet-width) {
+      top: -237px;
+      height: 512px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -237px;
+      height: 512px;
+      left: 39%;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    left: 364px;
-    top: 341px;
+    left: 333px;
+    top: 329px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 310px;
-    top: 282px;
+    left: 312px;
+    top: 269px;
+  }
+
+  &:hover::before {
+    background-color: @color-basic-green;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.example__button:hover {
+  .example__thumb {
+    path {
+      stroke: @color-basic-green;
+      fill: @color-basic-green;
+    }
+
+    rect {
+      stroke: @color-basic-green;
+    }
   }
 }

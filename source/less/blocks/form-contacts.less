@@ -11,13 +11,14 @@
   padding: 0;
   margin: 0;
   margin-bottom: 35px;
+  width: 200px;
   position: relative;
   background-color: @color-white;
   display: inline-block;
   padding-right: 14px;
-  padding-left: 14px;
 
   &::before {
+    padding-left: 14px;
     content: "";
     position: absolute;
     z-index: -2;
@@ -33,7 +34,8 @@
     line-height: 36px;
     margin-bottom: 76px;
     padding: 0 39px;
-    margin-left: -41px;
+    margin-left: -42px;
+    width: 593px;
 
     &::before {
       left: -200%;
@@ -48,6 +50,7 @@
     padding-left: 40px;
     padding-right: 40px;
     margin-left: -44px;
+    width: 595px;
 
     &::before {
       left: -200%;
@@ -61,10 +64,6 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-
-  @media (min-width: @tablet-width) {
-    /* ... */
-  }
 
   @media (min-width: @desktop-width) {
     width: 1214px;
@@ -127,10 +126,6 @@
   @media (min-width: @tablet-width) {
     min-width: 63px;
   }
-
-  @media (min-width: @desktop-width) {
-    /*...*/
-  }
 }
 
 .form-contacts__input-wrapper {
@@ -151,7 +146,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-    padding: 10px 45px 11px 17px;
+    padding: 10px 45px 11px 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -192,7 +187,7 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 551px;
+    width: 554px;
   }
 
   @media (min-width: @desktop-width) {
@@ -208,16 +203,16 @@
 
 .form-contacts__icon--email {
   left: 182px;
-  top: 17px;
+  top: 11px;
 
   @media (min-width: @tablet-width) {
-    left: 506px;
-    top: 18px;
+    left: 514px;
+    top: 15px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 436px;
-    top: 19px;
+    left: 448px;
+    top: 17px;
   }
 }
 
@@ -226,12 +221,12 @@
   top: 15px;
 
   @media (min-width: @tablet-width) {
-    left: 493px;
+    left: 496px;
     top: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    left: 429px;
+    left: 439px;
     top: 15px;
   }
 }

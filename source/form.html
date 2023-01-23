@@ -2,13 +2,22 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml"> <!-- 16×16 -->
+    <link rel="apple-touch-icon" href="img/favicons/favicon-apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <link rel="preload" href="/css/style.min.css" as="style">
+    <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
   </head>
+
   <body class="page__body">
     <header class="main-header main-header--form">
-      <!-- Для реализации без script.js раскомментировать класс "main-header__wrapper-nojs" -->
+      <!-- Для реализации без script.js удалить 265 строку -->
       <div class="main-header__wrapper main-header__wrapper-nojs">
         <div class="main-header__wrapper-logo">
           <a class="main-header__logo" href="index.html">
@@ -58,20 +67,17 @@
                 <h2 class="visually-hidden"> Информация о котике.</h2>
                 <ul class="form-info__list">
                   <li class="form-info__item">
-                    <p class="form-info__parameter form-info__parameter--required">Имя:*</p>
-                    <label class="visually-hidden" for="name">Имя.</label>
+                    <label class="form-info__parameter form-info__parameter--required" for="name">Имя:*</label>
                     <input class="form-info__input" type="text" id="name" name="name" placeholder="Барсик" required/>
                   </li>
 
                   <li class="form-info__item">
-                    <p class="form-info__parameter form-info__parameter--weight form-info__parameter--required">Вес (Кг):*</p>
-                    <label class="visually-hidden" for="weight">Вес.</label>
+                    <label class="form-info__parameter form-info__parameter--weight form-info__parameter--required" for="weight">Вес (Кг):*</label>
                     <input class="form-info__input" type="number" id="weight" name="weight" placeholder="7" required/>
                   </li>
 
                   <li class="form-info__item">
-                    <p class="form-info__parameter form-info__parameter--age">Возраст (лет):</p>
-                    <label class="visually-hidden" for="age">Возраст.</label>
+                    <label class="form-info__parameter form-info__parameter--age" for="age">Возраст (лет):</label>
                     <input class="form-info__input" type="number" id="age" name="age" placeholder="7"/>
                   </li>
                 </ul>
@@ -111,19 +117,17 @@
               <h2 class="form-contacts__title">Контактные данные (владельца кота)</h2>
               <ul class="form-contacts__list">
                 <li class="form-contacts__item">
-                  <p class="form-contacts__parameter form-contacts__parameter--email form-contacts__parameter--required">E-mail:*</p>
-                  <label class="visually-hidden" for="email">Электронная почта.</label>
+                  <label class="form-contacts__parameter form-contacts__parameter--email form-contacts__parameter--required" for="email">E-mail:*</label>
                   <div class="form-contacts__input-wrapper">
                     <input class="form-contacts__input form-contacts__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required/>
-                    <svg class="form-contacts__icon form-contacts__icon--email" width="19" height="14" aria-label="Почта.">
+                    <svg class="form-contacts__icon form-contacts__icon--email" width="25" height="25" aria-label="Почта.">
                       <use href="img/sprite.svg#email"></use>
                     </svg>
                   </div>
                 </li>
 
                 <li class="form-contacts__item">
-                  <p class="form-contacts__parameter form-contacts__parameter--phone form-contacts__parameter--required">Телефон:*</p>
-                  <label class="visually-hidden" for="phone">Телефон.</label>
+                  <label class="form-contacts__parameter form-contacts__parameter--phone form-contacts__parameter--required" for="phone">Телефон:*</label>
                   <div class="form-contacts__input-wrapper">
                     <input class="form-contacts__input form-contacts__input--phone" type="tel" id="phone" name="phone" placeholder="8 (960) 900-60-90" required/>
                     <svg class="form-contacts__icon form-contacts__icon--phone" width="20" height="21" aria-label="Телефон.">

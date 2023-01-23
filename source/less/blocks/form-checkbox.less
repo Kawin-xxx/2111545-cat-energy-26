@@ -61,12 +61,12 @@
   margin: 0;
   display: grid;
   grid-template-columns: 280px;
-  margin-bottom: 34px;
+  margin-bottom: 39px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 221px 221px;
     gap: 42px 123px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
   }
 
   @media (min-width: @desktop-width) {
@@ -98,6 +98,10 @@
 
 .form-checkbox__input:hover + .form-checkbox__control-mark {
   outline: 1px solid @color-special-grey-3;
+}
+
+.form-checkbox__input:focus-visible + .form-checkbox__control-mark {
+  outline: 1px @color-black solid;
 }
 
 .form-checkbox__input:disabled + .form-checkbox__control-mark {
