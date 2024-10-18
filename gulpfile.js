@@ -166,6 +166,21 @@ export default gulp.series(
   watcher
 ));
 
+// Delete Build
+
+function deleteBuild () {
+  return deleteAsync('build');
+}
+
+// Build Prod
+
+export function buildProd (done) {
+  gulp.series(
+    deleteBuild,
+    build
+  )(done);
+}
+
 
 /*export default gulp.series(
   html, optimizeImages, copyImages, createWebp, svg, sprite, copy, clean, scripts, styles, server, watcher
